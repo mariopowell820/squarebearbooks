@@ -1,79 +1,55 @@
 body {
   margin: 0;
   padding: 0;
-  background: url('05-30 page layout.png') no-repeat top center;
-  background-size: contain;
-  background-color: #fdf0c2;
-  font-family: Georgia, serif;
-  overflow-x: hidden;
+  background: url('05-30 page layout.png') no-repeat center top;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Georgia', serif;
+  color: #3a2a0d;
+  height: 100vh;
+  overflow-y: auto;
 }
 
-nav {
-  position: fixed;
-  top: 0;
-  right: 20px;
-  background-color: transparent;
-  padding: 10px;
-  z-index: 1000;
-}
-
-nav a {
-  color: #000;
-  margin-left: 20px;
-  text-decoration: none;
+button {
+  background-color: #dc5b1d;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
   font-weight: bold;
+  font-size: 16px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+  cursor: pointer;
 }
 
-.button-link {
+.nav {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  gap: 20px;
+}
+
+button.scroll-btn {
   position: absolute;
-  background: rgba(255, 255, 255, 0.7);
-  padding: 10px 15px;
+  background-color: rgba(255,255,255,0.8);
+  color: black;
+  padding: 8px 14px;
   border-radius: 8px;
   font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  z-index: 10;
-}
-
-/* Button Positioning */
-#explore-button {
-  top: 395px;
-  left: 48px;
 }
 
 #shop-button {
-  bottom: 110px;
+  bottom: 80px;
   right: 20px;
 }
 
 #learn-button {
-  bottom: 70px;
-  left: 210px;
+  bottom: 20px;
+  left: 20px;
 }
 
-/* Responsive scaling */
-@media screen and (max-width: 768px) {
-  body {
-    background-size: 1000px auto;
-  }
-
-  .button-link {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  #explore-button {
-    top: 300px;
-    left: 30px;
-  }
-
-  #shop-button {
-    bottom: 100px;
-    right: 15px;
-  }
-
-  #learn-button {
-    bottom: 60px;
-    left: 150px;
-  }
+html, body {
+  height: 100%;
+  overflow-x: hidden;
 }
