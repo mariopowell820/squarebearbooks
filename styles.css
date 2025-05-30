@@ -1,34 +1,55 @@
 body {
   margin: 0;
   padding: 0;
-  overflow: hidden;
-}
-
-.page-container {
+  background: url("05-30 page layout.png") no-repeat top center;
+  background-size: contain;
+  background-color: #fef1c5;
+  min-height: 2600px; /* matches layout image height */
+  font-family: 'Georgia', serif;
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
 }
 
-.background-layout {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.quote-banner {
-  position: absolute;
+/* Top navigation links (optional enhancement) */
+nav {
+  position: fixed;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 40px;
   z-index: 10;
-  max-width: 90%;
 }
 
-.quote-banner img {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+
+/* Button Styles */
+.button {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-weight: bold;
+  padding: 12px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: #ffd966;
+  transform: scale(1.05);
+}
+
+/* Button Positions (adjust these if needed) */
+#shop-button {
+  top: 580px;  /* adjust to match Gary’s overalls area */
+  right: 160px;
+}
+
+#learn-button {
+  top: 1020px;  /* adjust to the honey jar area */
+  left: 280px;
 }
