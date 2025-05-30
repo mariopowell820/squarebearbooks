@@ -1,64 +1,38 @@
-body {
+body, html {
   margin: 0;
   padding: 0;
-  background-color: #fdf1c6;
-  font-family: 'Georgia', serif;
+  overflow-x: hidden;
+  background-color: #faebc7;
+  font-family: Arial, sans-serif;
 }
 
-.layout-wrapper {
+.page-layout {
   position: relative;
   width: 100%;
-  max-width: 100%;
-  overflow-x: hidden;
+  height: auto;
+  overflow: auto;
 }
 
 .background-img {
-  display: block;
   width: 100%;
   height: auto;
+  display: block;
 }
 
-.nav-buttons {
+/* Buttons placed over layout */
+.ghost-button,
+.nav-button {
   position: absolute;
-  top: 32px;
-  right: 10px;
-  display: flex;
-  gap: 20px;
-  z-index: 10;
-}
-
-.nav-link {
-  font-weight: bold;
-  font-size: 16px;
-  text-decoration: none;
-  color: #000;
-  background-color: transparent;
-}
-
-.ghost-button {
-  position: absolute;
-  z-index: 10;
   background-color: transparent;
   border: none;
-  font-size: 16px;
   font-weight: bold;
-  color: #000;
-  text-decoration: none;
-  padding: 10px 15px;
+  color: black;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 4px 8px;
 }
 
-.ghost-button.explore {
-  top: 390px;
-  left: 40px;
-}
-
-.ghost-button.shop {
-  top: 1090px;
-  right: 60px;
-}
-
-.ghost-button.learn {
-  top: 1090px;
-  left: 40px;
+.nav-button {
+  font-size: 16px;
 }
