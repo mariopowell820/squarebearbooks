@@ -1,18 +1,15 @@
-/* styles.css */
-
-body, html {
+body {
   margin: 0;
   padding: 0;
+  background-color: #fdf1c6;
   font-family: 'Georgia', serif;
-  background-color: #fdf0c2;
-  overflow-x: hidden;
 }
 
-.background {
+.layout-wrapper {
   position: relative;
   width: 100%;
-  height: auto;
-  overflow: hidden;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .background-img {
@@ -21,24 +18,47 @@ body, html {
   height: auto;
 }
 
-.ghost-button {
+.nav-buttons {
   position: absolute;
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.1);
-  color: black;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-size: 16px;
+  top: 32px;
+  right: 10px;
+  display: flex;
+  gap: 20px;
   z-index: 10;
 }
 
 .nav-link {
-  position: absolute;
-  font-size: 16px;
-  color: black;
   font-weight: bold;
+  font-size: 16px;
   text-decoration: none;
+  color: #000;
+  background-color: transparent;
+}
+
+.ghost-button {
+  position: absolute;
   z-index: 10;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.ghost-button.explore {
+  top: 390px;
+  left: 40px;
+}
+
+.ghost-button.shop {
+  top: 1090px;
+  right: 60px;
+}
+
+.ghost-button.learn {
+  top: 1090px;
+  left: 40px;
 }
