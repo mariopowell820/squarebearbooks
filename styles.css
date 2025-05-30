@@ -18,19 +18,24 @@ body {
   display: block;
 }
 
-/* Navigation bar styling */
-.nav-button {
+/* Updated Navigation Bar Styling */
+.nav-bar {
   position: absolute;
+  top: 30px;
+  right: 20px;
+  display: flex;
+  gap: 30px;
   font-weight: bold;
-  color: black;
-  text-decoration: none;
-  font-size: 16px;
-  background: none;
-  border: none;
-  padding: 0 10px;
+  font-family: 'Georgia', serif;
+  z-index: 10;
 }
 
-.nav-button:hover {
+.nav-bar a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-bar a:hover {
   text-decoration: underline;
 }
 
