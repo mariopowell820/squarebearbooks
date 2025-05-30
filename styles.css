@@ -1,55 +1,71 @@
-body {
+/* Make the full body scrollable */
+* {
   margin: 0;
   padding: 0;
-  background: url('05-30 page layout.png') no-repeat center top;
-  background-size: cover;
-  background-attachment: fixed;
-  font-family: 'Georgia', serif;
-  color: #3a2a0d;
-  height: 100vh;
-  overflow-y: auto;
-}
-
-button {
-  background-color: #dc5b1d;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 10px;
-  font-weight: bold;
-  font-size: 16px;
-  box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-  cursor: pointer;
-}
-
-.nav {
-  position: fixed;
-  top: 20px;
-  right: 40px;
-  display: flex;
-  gap: 20px;
-}
-
-button.scroll-btn {
-  position: absolute;
-  background-color: rgba(255,255,255,0.8);
-  color: black;
-  padding: 8px 14px;
-  border-radius: 8px;
-  font-weight: bold;
-}
-
-#shop-button {
-  bottom: 80px;
-  right: 20px;
-}
-
-#learn-button {
-  bottom: 20px;
-  left: 20px;
+  box-sizing: border-box;
 }
 
 html, body {
   height: 100%;
-  overflow-x: hidden;
+  width: 100%;
+  overflow-y: auto;
+  font-family: Arial, sans-serif;
+  background-color: #fceec1;
+}
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.background-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Position main nav links */
+.nav-links {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.nav-links a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Buttons */
+.button {
+  position: absolute;
+  padding: 12px 24px;
+  background: rgba(255, 183, 77, 0.9);
+  border-radius: 8px;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: rgba(255, 140, 0, 0.95);
+}
+
+/* Shop button */
+.shop {
+  bottom: 85px;
+  right: 30px;
+}
+
+/* Learn More button */
+.learn {
+  bottom: 85px;
+  left: 30px;
 }
