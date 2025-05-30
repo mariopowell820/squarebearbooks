@@ -2,84 +2,55 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Square Bear Books</title>
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
       background: url('05-30 page layout.png') no-repeat center top;
       background-size: cover;
-      height: 100vh;
+      background-attachment: fixed;
+      background-color: #f9db7b; /* fallback background */
+      min-height: 100vh;
+      font-family: Georgia, serif;
       overflow-x: hidden;
-      scroll-behavior: smooth;
     }
 
-    .button-container {
-      position: absolute;
-      top: 0;
-      left: 0;
+    /* Optional: Make image responsive if needed later */
+    img.full-bg {
       width: 100%;
-      height: 100%;
-      pointer-events: none; /* allows clicks only on buttons */
+      height: auto;
+      display: block;
     }
 
-    .nav-button {
+    /* Invisible navigation buttons (examples to hook up later) */
+    .btn {
       position: absolute;
-      pointer-events: auto;
-      background: rgba(255, 255, 255, 0.01); /* invisible but clickable */
-      border: none;
       cursor: pointer;
+      background: transparent;
+      border: none;
     }
 
-    /* Example button positioning */
-    #btn-about {
-      top: 15%;
-      left: 10%;
-      width: 20%;
-      height: 5%;
-    }
-
-    #btn-preview {
-      top: 30%;
-      left: 10%;
-      width: 20%;
-      height: 5%;
-    }
-
-    #btn-contact {
-      top: 90%;
-      left: 10%;
-      width: 20%;
-      height: 5%;
-    }
-
-    /* Section targets */
-    section {
-      height: 100vh;
-    }
-
-    #about, #preview, #contact {
-      scroll-margin-top: 50px;
+    /* Example placeholder: Explore His Story button */
+    .explore-btn {
+      top: 220px;
+      left: 50px;
+      width: 220px;
+      height: 50px;
     }
   </style>
 </head>
 <body>
-  <div class="button-container">
-    <button id="btn-about" class="nav-button" onclick="scrollToSection('about')"></button>
-    <button id="btn-preview" class="nav-button" onclick="scrollToSection('preview')"></button>
-    <button id="btn-contact" class="nav-button" onclick="scrollToSection('contact')"></button>
-  </div>
 
-  <section id="about"></section>
-  <section id="preview"></section>
-  <section id="contact"></section>
+  <!-- Add invisible button for future link (optional) -->
+  <!--
+  <button class="btn explore-btn" onclick="alert('Explore His Story clicked!')"></button>
+  -->
 
-  <script>
-    function scrollToSection(id) {
-      const section = document.getElementById(id);
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
-  </script>
 </body>
 </html>
