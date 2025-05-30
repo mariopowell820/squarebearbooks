@@ -1,55 +1,79 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("05-30 page layout.png") no-repeat top center;
+  background: url('05-30 page layout.png') no-repeat top center;
   background-size: contain;
-  background-color: #fef1c5;
-  min-height: 2600px; /* matches layout image height */
-  font-family: 'Georgia', serif;
-  position: relative;
+  background-color: #fdf0c2;
+  font-family: Georgia, serif;
+  overflow-x: hidden;
 }
 
-/* Top navigation links (optional enhancement) */
 nav {
   position: fixed;
-  top: 20px;
-  right: 40px;
-  z-index: 10;
+  top: 0;
+  right: 20px;
+  background-color: transparent;
+  padding: 10px;
+  z-index: 1000;
 }
 
 nav a {
+  color: #000;
   margin-left: 20px;
   text-decoration: none;
-  color: #000;
   font-weight: bold;
 }
 
-/* Button Styles */
-.button {
+.button-link {
   position: absolute;
-  background-color: rgba(255, 255, 255, 0.8);
-  border: none;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 10px 15px;
+  border-radius: 8px;
   font-weight: bold;
-  padding: 12px 20px;
-  border-radius: 10px;
-  cursor: pointer;
-  font-size: 16px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
+  color: #000;
+  text-decoration: none;
+  z-index: 10;
 }
 
-.button:hover {
-  background-color: #ffd966;
-  transform: scale(1.05);
+/* Button Positioning */
+#explore-button {
+  top: 395px;
+  left: 48px;
 }
 
-/* Button Positions (adjust these if needed) */
 #shop-button {
-  top: 580px;  /* adjust to match Gary’s overalls area */
-  right: 160px;
+  bottom: 110px;
+  right: 20px;
 }
 
 #learn-button {
-  top: 1020px;  /* adjust to the honey jar area */
-  left: 280px;
+  bottom: 70px;
+  left: 210px;
+}
+
+/* Responsive scaling */
+@media screen and (max-width: 768px) {
+  body {
+    background-size: 1000px auto;
+  }
+
+  .button-link {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  #explore-button {
+    top: 300px;
+    left: 30px;
+  }
+
+  #shop-button {
+    bottom: 100px;
+    right: 15px;
+  }
+
+  #learn-button {
+    bottom: 60px;
+    left: 150px;
+  }
 }
