@@ -4,21 +4,53 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Square Bear Books</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('images/05-30-page-layout.png') no-repeat top center;
+      background-size: cover;
+      font-family: sans-serif;
+    }
+
+    .button-overlay {
+      position: absolute;
+      z-index: 1000;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Example button placement and sizing (adjust per actual layout) */
+    #buy-now {
+      top: 700px;  /* Approximate Y position */
+      left: 60px;  /* Approximate X position */
+      width: 180px;
+      height: 60px;
+    }
+
+    #preview {
+      top: 780px;
+      left: 60px;
+      width: 180px;
+      height: 60px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Quote Banner -->
-  <div class="quote-banner">
-    <img src="quote-banner.png" alt="Inspirational Quote" />
-  </div>
+  <!-- Button overlays -->
+  <button class="button-overlay" id="buy-now" onclick="window.open('https://www.amazon.com/dp/B0D2H7GKHZ', '_blank')"></button>
+  <button class="button-overlay" id="preview" onclick="document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth' });"></button>
 
-  <!-- Full Page Background Layout -->
-  <div class="page-container">
-    <img
-      class="background-layout"
-      src="05-30-page-layout.png"
-      alt="Square Bear Books Layout"
-    />
-  </div>
+  <!-- Optional anchor target -->
+  <div id="preview-section" style="margin-top: 1800px;"></div>
 </body>
 </html>
