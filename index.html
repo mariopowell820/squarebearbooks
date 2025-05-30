@@ -5,125 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Square Bear Books</title>
   <style>
-    * {
+    body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    html, body {
-      height: 100%;
-      width: 100%;
-      font-family: 'Georgia', serif;
-      overflow-x: hidden;
-      background-color: #fdf0cd;
-    }
-
-    .background {
-      background-image: url('images/05-30-page-layout.png');
+      background: url('05-30%20page%20layout.png') no-repeat center top;
       background-size: cover;
-      background-position: top center;
-      background-repeat: no-repeat;
-      height: 3000px; /* Enough to show full design */
-      position: relative;
+      height: 100vh;
+      overflow: hidden;
+      font-family: sans-serif;
     }
 
-    .nav-links {
-      position: fixed;
-      top: 30px;
-      right: 40px;
-      z-index: 1000;
-      display: flex;
-      gap: 30px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: #432818;
-      font-weight: bold;
-      font-size: 18px;
-      transition: color 0.3s ease;
-    }
-
-    .nav-links a:hover {
-      color: #b2531d;
-    }
-
-    .button-area {
+    .button {
       position: absolute;
-      top: 270px;
-      left: 50px;
-      z-index: 100;
-    }
-
-    .button-area a {
-      background-color: #d86130;
-      padding: 12px 20px;
-      color: #fff;
-      text-decoration: none;
+      padding: 10px 20px;
+      background-color: rgba(255, 255, 255, 0.8);
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
       border-radius: 8px;
-      font-weight: bold;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     }
 
-    .button-area a:hover {
-      background-color: #b14a1a;
-    }
-
-    .buy-link {
-      position: absolute;
-      bottom: 120px;
-      right: 90px;
-      background-color: transparent;
-      font-weight: bold;
-      font-size: 18px;
-      color: #2a4b2e;
-      text-align: center;
-    }
-
-    .buy-link a {
-      text-decoration: none;
-      color: #000;
-    }
-
-    .buy-link a:hover {
-      text-decoration: underline;
-    }
-
-    @media (max-width: 768px) {
-      .nav-links {
-        gap: 15px;
-        top: 20px;
-        right: 20px;
-        font-size: 14px;
-      }
-
-      .button-area {
-        top: 250px;
-        left: 20px;
-      }
-    }
+    /* Sample button positions — adjust as needed */
+    #shop-now { top: 78%; left: 45%; transform: translate(-50%, -50%); }
+    #learn-more { top: 88%; left: 50%; transform: translate(-50%, -50%); }
   </style>
 </head>
 <body>
-  <div class="background">
-    <!-- Top Navigation Links -->
-    <div class="nav-links">
-      <a href="#top">Home</a>
-      <a href="#about">About Gary</a>
-      <a href="#book">Book</a>
-      <a href="#contact">Contact</a>
-    </div>
-
-    <!-- Explore His Story Button (over the orange button in image) -->
-    <div class="button-area">
-      <a href="#about">Explore His Story</a>
-    </div>
-
-    <!-- Featured Book Buy Link -->
-    <div class="buy-link">
-      <a href="https://www.amazon.com/dp/B0D1RZ1K8T" target="_blank">Buy Now on Amazon</a>
-    </div>
-  </div>
+  <button id="shop-now" class="button" onclick="window.open('https://www.amazon.com/dp/B0D3Q5T4JZ', '_blank')">Shop Now</button>
+  <button id="learn-more" class="button" onclick="alert('More coming soon!')">Learn More</button>
 </body>
 </html>
