@@ -2,55 +2,128 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Square Bear Books</title>
   <style>
-    body {
+    * {
       margin: 0;
       padding: 0;
-      background: url('images/05-30-page-layout.png') no-repeat top center;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      font-family: 'Georgia', serif;
+      overflow-x: hidden;
+      background-color: #fdf0cd;
+    }
+
+    .background {
+      background-image: url('images/05-30-page-layout.png');
       background-size: cover;
-      font-family: sans-serif;
+      background-position: top center;
+      background-repeat: no-repeat;
+      height: 3000px; /* Enough to show full design */
+      position: relative;
     }
 
-    .button-overlay {
-      position: absolute;
+    .nav-links {
+      position: fixed;
+      top: 30px;
+      right: 40px;
       z-index: 1000;
+      display: flex;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #432818;
+      font-weight: bold;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #b2531d;
+    }
+
+    .button-area {
+      position: absolute;
+      top: 270px;
+      left: 50px;
+      z-index: 100;
+    }
+
+    .button-area a {
+      background-color: #d86130;
+      padding: 12px 20px;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+
+    .button-area a:hover {
+      background-color: #b14a1a;
+    }
+
+    .buy-link {
+      position: absolute;
+      bottom: 120px;
+      right: 90px;
       background-color: transparent;
-      border: none;
-      cursor: pointer;
+      font-weight: bold;
+      font-size: 18px;
+      color: #2a4b2e;
+      text-align: center;
     }
 
-    /* Example button placement and sizing (adjust per actual layout) */
-    #buy-now {
-      top: 700px;  /* Approximate Y position */
-      left: 60px;  /* Approximate X position */
-      width: 180px;
-      height: 60px;
+    .buy-link a {
+      text-decoration: none;
+      color: #000;
     }
 
-    #preview {
-      top: 780px;
-      left: 60px;
-      width: 180px;
-      height: 60px;
+    .buy-link a:hover {
+      text-decoration: underline;
     }
 
     @media (max-width: 768px) {
-      body {
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: top center;
+      .nav-links {
+        gap: 15px;
+        top: 20px;
+        right: 20px;
+        font-size: 14px;
+      }
+
+      .button-area {
+        top: 250px;
+        left: 20px;
       }
     }
   </style>
 </head>
 <body>
-  <!-- Button overlays -->
-  <button class="button-overlay" id="buy-now" onclick="window.open('https://www.amazon.com/dp/B0D2H7GKHZ', '_blank')"></button>
-  <button class="button-overlay" id="preview" onclick="document.getElementById('preview-section').scrollIntoView({ behavior: 'smooth' });"></button>
+  <div class="background">
+    <!-- Top Navigation Links -->
+    <div class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#about">About Gary</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </div>
 
-  <!-- Optional anchor target -->
-  <div id="preview-section" style="margin-top: 1800px;"></div>
+    <!-- Explore His Story Button (over the orange button in image) -->
+    <div class="button-area">
+      <a href="#about">Explore His Story</a>
+    </div>
+
+    <!-- Featured Book Buy Link -->
+    <div class="buy-link">
+      <a href="https://www.amazon.com/dp/B0D1RZ1K8T" target="_blank">Buy Now on Amazon</a>
+    </div>
+  </div>
 </body>
 </html>
