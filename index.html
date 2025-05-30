@@ -2,25 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Square Bear Books</title>
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <div class="page-container">
-    <img src="05-30 page layout.png" alt="Square Bear Page Layout" class="background-image" />
-
-    <!-- NAVIGATION LINKS (non-functional for now) -->
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About Gary</a></li>
-      <li><a href="#">Book</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-
-    <!-- MAIN BUTTONS -->
-    <a href="https://www.amazon.com/dp/your-amazon-link" class="button shop">Shop Now</a>
-    <a href="#about" class="button learn">Learn More</a>
+  <!-- Background image layout -->
+  <div class="background">
+    <img src="05-30 page layout.png" alt="Page Layout" class="background-img" />
   </div>
+
+  <!-- Transparent buttons over the layout -->
+  <a href="#about" class="nav-link" style="top: 32px; right: 210px;">Home</a>
+  <a href="#about" class="nav-link" style="top: 32px; right: 130px;">About Gary</a>
+  <a href="#book" class="nav-link" style="top: 32px; right: 70px;">Book</a>
+  <a href="#contact" class="nav-link" style="top: 32px; right: 10px;">Contact</a>
+
+  <!-- Buttons -->
+  <a href="#about" class="ghost-button" style="top: 390px; left: 40px;">Explore His Story</a>
+  <a href="https://amazon.com" target="_blank" class="ghost-button" style="top: 1090px; right: 60px;">Shop Now</a>
+  <a href="#about" class="ghost-button" style="top: 1090px; left: 40px;">Learn More</a>
 </body>
 </html>
