@@ -4,24 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Square Bear Books</title>
-  <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="layout-wrapper">
+  <!-- Scrollable container -->
+  <div class="page-layout">
     <img src="05-30 page layout.png" alt="Page Layout" class="background-img" />
 
-    <!-- Transparent nav links over top -->
-    <div class="nav-buttons">
-      <a href="#home" class="nav-link home">Home</a>
-      <a href="#about" class="nav-link about">About Gary</a>
-      <a href="#book" class="nav-link book">Book</a>
-      <a href="#contact" class="nav-link contact">Contact</a>
-    </div>
+    <!-- Navigation Buttons -->
+    <a href="#home" class="nav-button" style="top: 30px; right: 210px;">Home</a>
+    <a href="#about" class="nav-button" style="top: 30px; right: 130px;">About Gary</a>
+    <a href="#book" class="nav-button" style="top: 30px; right: 70px;">Book</a>
+    <a href="#contact" class="nav-button" style="top: 30px; right: 10px;">Contact</a>
 
-    <!-- Other transparent buttons -->
-    <a href="#about" class="ghost-button explore">Explore His Story</a>
-    <a href="https://amazon.com" target="_blank" class="ghost-button shop">Shop Now</a>
-    <a href="#about" class="ghost-button learn">Learn More</a>
+    <!-- Floating Action Buttons -->
+    <a href="#about" class="ghost-button" style="top: 390px; left: 40px;">Explore His Story</a>
+    <a href="https://amazon.com" target="_blank" class="ghost-button" style="top: 1090px; right: 60px;">Shop Now</a>
+    <a href="#about" class="ghost-button" style="top: 1090px; left: 40px;">Learn More</a>
   </div>
 </body>
 </html>
