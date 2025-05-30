@@ -1,71 +1,44 @@
-/* Make the full body scrollable */
-* {
+/* styles.css */
+
+body, html {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Georgia', serif;
+  background-color: #fdf0c2;
+  overflow-x: hidden;
 }
 
-html, body {
-  height: 100%;
-  width: 100%;
-  overflow-y: auto;
-  font-family: Arial, sans-serif;
-  background-color: #fceec1;
-}
-
-.page-container {
+.background {
   position: relative;
-  min-height: 100vh;
   width: 100%;
+  height: auto;
+  overflow: hidden;
 }
 
-.background-image {
+.background-img {
   display: block;
   width: 100%;
   height: auto;
 }
 
-/* Position main nav links */
-.nav-links {
+.ghost-button {
   position: absolute;
-  top: 40px;
-  right: 40px;
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  color: black;
   font-weight: bold;
-  font-size: 16px;
-}
-
-.nav-links a {
-  color: #000;
-  text-decoration: none;
-}
-
-/* Buttons */
-.button {
-  position: absolute;
-  padding: 12px 24px;
-  background: rgba(255, 183, 77, 0.9);
+  border: none;
   border-radius: 8px;
-  color: #000;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 10;
+}
+
+.nav-link {
+  position: absolute;
+  font-size: 16px;
+  color: black;
   font-weight: bold;
   text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.button:hover {
-  background: rgba(255, 140, 0, 0.95);
-}
-
-/* Shop button */
-.shop {
-  bottom: 85px;
-  right: 30px;
-}
-
-/* Learn More button */
-.learn {
-  bottom: 85px;
-  left: 30px;
+  z-index: 10;
 }
