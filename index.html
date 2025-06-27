@@ -2,33 +2,143 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Square Bear Books</title>
-  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fff8e1;
+      color: #4e2a00;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+      background-color: #f7a400;
+    }
+    header img {
+      height: 50px;
+    }
+    nav {
+      display: flex;
+      gap: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #4e2a00;
+      font-weight: bold;
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+      background-color: #fde8b5;
+    }
+    .hero img {
+      max-width: 100%;
+    }
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 2rem;
+    }
+    .section div {
+      flex: 1 1 300px;
+      margin: 1rem;
+      background-color: #fff3d1;
+      padding: 1rem;
+      border-radius: 10px;
+    }
+    .section img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .buttons {
+      display: flex;
+      justify-content: space-around;
+      padding: 1rem;
+    }
+    .buttons a button {
+      background-color: #668cff;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1rem;
+      border-radius: 10px;
+    }
+    .nav-mobile {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      nav {
+        display: none;
+      }
+      .nav-mobile {
+        display: block;
+        background-color: #f7a400;
+        padding: 1rem;
+        text-align: center;
+      }
+      .nav-mobile a {
+        display: block;
+        margin: 0.5rem 0;
+        font-weight: bold;
+        color: #4e2a00;
+        text-decoration: none;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Page Container -->
-  <div class="page-layout">
-    <img src="05-30 page layout.png" alt="Page Layout" class="background-img" />
-
-    <!-- Navigation Links -->
-    <a href="#home" class="nav-button" style="top: 30px; right: 210px;">Home</a>
-    <a href="#about" class="nav-button" style="top: 30px; right: 130px;">About Gary</a>
-    <a href="#book" class="nav-button" style="top: 30px; right: 70px;">Book</a>
-    <a href="#contact" class="nav-button" style="top: 30px; right: 10px;">Contact</a>
-
-    <!-- Action Buttons -->
-    <a href="#about" class="ghost-button" style="top: 390px; left: 40px;">Explore His Story</a>
-    
-    <!-- Amazon Link Button -->
-    <a href="https://www.amazon.com/dp/B0FFNNVQTZ" 
-       target="_blank" 
-       class="ghost-button" 
-       style="top: 1090px; right: 60px;">
-       Shop Now
-    </a>
-
-    <a href="#about" class="ghost-button" style="top: 1090px; left: 40px;">Learn More</a>
+  <header>
+    <img src="logo.png" alt="Square Bear Books Logo" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About Gary</a>
+      <a href="#book">Book</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="nav-mobile">
+    <a href="#home">Home</a>
+    <a href="#about">About Gary</a>
+    <a href="#book">Book</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <section class="hero" id="home">
+    <h1>Meet Gary — The Square Bear with a Big Heart</h1>
+    <p>He's not like the other bears. And that’s what makes him amazing.</p>
+    <a href="#about"><button>Explore His Story</button></a>
+    <img src="gary-cape.png" alt="Gary the Square Bear with a cape" />
+  </section>
+  <section class="section" id="about">
+    <div>
+      <h2>About Gary</h2>
+      <p>Gary the Square Bear is a little cub with a big imagination and an even bigger heart. He may be shaped a little differently, but Gary reminds us all that being unique is something to celebrate. Whether he’s daydreaming on the swing or reading with a smile, Gary brings joy to everyone he meets.</p>
+      <img src="gary-bunny.png" alt="Gary with Bunny" />
+    </div>
+    <div>
+      <h2>Featured Book</h2>
+      <p>Gary is a little different—he's square! But when the world tries to shape him into someone else, Gary shows that being yourself is the bravest thing you can be.</p>
+      <p><strong>Now Available on Amazon!</strong></p>
+      <a href="https://www.amazon.com/dp/B0FFNNVQTZ" target="_blank">
+        <img src="gary-book.png" alt="Gary the Square Bear Book Cover" />
+      </a>
+    </div>
+  </section>
+  <section class="section">
+    <div>
+      <img src="gary-honey.png" alt="Gary eating honey" />
+    </div>
+  </section>
+  <div class="buttons">
+    <a href="https://www.amazon.com/dp/B0FFNNVQTZ" target="_blank"><button>Learn More</button></a>
+    <a href="https://www.amazon.com/dp/B0FFNNVQTZ" target="_blank"><button>Shop Now</button></a>
   </div>
 </body>
 </html>
